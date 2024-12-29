@@ -1,0 +1,10 @@
+<!-- ic_pot.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M19,10V19A2,2 0 0,1 17,21H7A2,2 0 0,1 5,19V10H19M8,12V19H9V12H8M11,12V19H12V12H11M14,12V19H15V12H14M6,4H8V6H16V4H18V8H6V4Z"/>
+</vector>

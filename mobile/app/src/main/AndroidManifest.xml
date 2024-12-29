@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Planttest2"
+        tools:targetApi="31">
+        <activity
+            android:name=".splash"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".notificationconfig.ReminderReceiver"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="google_signin_legacy_warning_disable"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.signin.disable_warning"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.signin.revoke_warning"
+            android:value="true" />
+
+        <activity
+            android:name=".ReminderSetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".GardenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlantesBdd"
+            android:exported="false" />
+        <activity
+            android:name=".ArActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavigation"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ChatBotMsgs"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBot"
+            android:exported="false" />
+        <activity
+            android:name=".LoadPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Planttest2" />
+        <activity
+            android:name=".MainTest"
+            android:exported="false" />
+        <activity
+            android:name=".plantsInfos"
+            android:exported="false" />
+        <activity
+            android:name=".DeatilPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SingupActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LoginActivity2"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".PlantSearchInfo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+    </application>
+
+</manifest>

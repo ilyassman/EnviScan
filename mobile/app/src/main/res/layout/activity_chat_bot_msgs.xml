@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Botaniste IA"
+        android:textSize="24sp"
+        android:textColor="#2E7D32" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/messageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_above="@id/inputContainer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/messagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bot_message_background"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBotIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/florist_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewBotanisteName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Botaniste IA"
+                        android:textColor="#003300"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewBotanistMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.05"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Bienvenue dans mon jardin botanique !\nJe suis là pour vous aider avec tous vos problèmes de plantes et pour vous donner des conseils sur leur entretien. N'hésitez pas à me poser toutes vos questions sur vos plantes, leurs caractéristiques, leurs maladies ou même pour des suggestions de nouvelles plantes à ajouter à votre collection.\nComment puis-je vous aider aujourd'hui ?"
+                        android:textColor="#003300"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/buttonVoiceInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Entrée vocale" />
+
+        <EditText
+            android:id="@+id/editTextUserInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Tapez votre message..."
+            android:inputType="text"
+            android:maxLines="3"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Envoyer" />
+
+    </LinearLayout>
+
+</RelativeLayout>

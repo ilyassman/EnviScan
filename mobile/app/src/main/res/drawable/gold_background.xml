@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Couche de fond dorée -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFD700"/>
+            <corners android:radius="14dp"/>
+        </shape>
+    </item>
+
+    <!-- Couche de gradient pour l'effet visuel -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FFD700"
+                android:endColor="#FFB90F"
+                android:angle="270"/>
+            <corners android:radius="14dp"/>
+        </shape>
+    </item>
+</layer-list>

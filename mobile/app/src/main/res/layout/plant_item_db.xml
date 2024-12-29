@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    android:backgroundTint="@color/white"
+    app:strokeWidth="0.4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Texte "AR" avec fond doré en haut à droite -->
+        <TextView
+            android:id="@+id/arLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/gold_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="AR"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/plantImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Plant Image"
+            android:layout_alignParentStart="true"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/plantImage">
+
+            <TextView
+                android:id="@+id/plantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                :textSize="20sp"
+                android:maxWidth="160dp"
+                android:textStyle="bold"
+                android:textColor="#004D40"/>
+
+            <TextView
+                android:id="@+id/plantScientificName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:textColor="#757575"/>
+
+            <!-- LinearLayout horizontal pour la catégorie et l'icône AR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/categoryChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipBackgroundColor="#E0F2F1"
+                    android:textColor="#00695C"
+                    app:chipStrokeWidth="0dp"/>
+
+                <!-- Ajout d'une vue vide pour pousser l'icône à la fin -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- Ajout d'une icône 3D pour indiquer la fonctionnalité AR -->
+                <ImageView
+                    android:id="@+id/arIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="AR Icon"
+                    android:src="@drawable/ic_3d_rotation"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

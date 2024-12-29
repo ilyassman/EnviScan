@@ -1,0 +1,20 @@
+<!-- res/layout/user_message_template.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/user_message_background"
+    android:padding="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_gravity="end">
+
+    <TextView
+        android:id="@+id/textViewUserMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</LinearLayout>

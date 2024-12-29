@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PlantTest2</string>
+    <string name="current_language">EN</string>
+    <string name="scan_plant">Scan plant</string>
+    <string name="choose_gallery">Choose from gallery</string>
+    <string name="care_tools">Care tools</string>
+    <string name="reminder">Reminder</string>
+    <string name="chatbot">Chatbot</string>
+    <string name="humidity">Humidity : </string>
+    <string name="model_load_error">Error loading the model</string>
+    <string name="add_reminder">+ Add reminder</string>
+    <string name="my_plants">My plants</string>
+    <string name="reminders">Reminders</string>
+    <string name="settings">Settings</string>
+    <string name="my_garden">My Garden</string>
+    <string name="add_plant">+ Add a plant</string>
+
+    <string name="title_botaniste_ia">Botanist AI</string>
+    <string name="message_greeting">Hello! You can send your message or get help using the suggestions. 😊</string>
+    <string name="hint_write_message">Write your message</string>
+
+    <string name="explore_plants">Explore Plants</string>
+    <string name="search_hint">Search for plants</string>
+
+    <string name="define_reminder">Set a reminder</string>
+    <string name="close">Close</string>
+    <string name="repeat">Repeat</string>
+    <string name="time">Time</string>
+    <string name="additional_notes">Additional notes</string>
+    <string name="notes_hint">• Add a task to do\n• Think about day planning\n• Prepare necessary materials</string>
+    <string name="activate_reminder">Activate reminder</string>
+
+    <string name="plant">Plant</string>
+    <string name="task_type">Remind me to</string>
+    <string name="select">Select</string>
+    <string name="notification_time">It\'s time to %1$s your plant</string>
+    <string name="time_picker_title">Select time</string>
+
+    <string name="watering">Water</string>
+    <string name="misting">Mist</string>
+    <string name="rotating">Rotate</string>
+    <string name="fertilizing">Fertilize</string>
+
+
+    <!-- Titles -->
+    <string name="about">About</string>
+    <string name="details">Details</string>
+    <string name="distribution">Distribution</string>
+    <string name="key_figures">Key Figures</string>
+    <string name="characteristics">Characteristics</string>
+    <string name="fun_facts">Fun Facts</string>
+
+    <!-- Tags -->
+    <string name="easy">Easy</string>
+    <string name="shortt">Short</string>
+    <string name="flowering">Flowering</string>
+    <string name="medicinal">Medicinal</string>
+    <string name="purifying">Purifying</string>
+
+    <!-- Details -->
+    <string name="temperature">Temperature</string>
+    <string name="sunlight">Sunlight</string>
+    <string name="water">Water</string>
+    <string name="repotting">Repotting</string>
+    <string name="fertilization">Fertilization</string>
+
+    <!-- Characteristics -->
+    <string name="toxicity">Toxicity</string>
+    <string name="weed">Weed</string>
+    <string name="invasive">Invasive Character</string>
+    <string name="lifespan">Lifespan</string>
+    <string name="planting_period">Planting Period</string>
+
+    <!-- Buttons -->
+    <string name="add_to_my_plants">Add to My Plants</string>
+    <string name="view_3d">View 3D</string>
+
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- New strings for OnboardingViewPagerAdapter in English -->
+    <string name="identify_harmful_plants">Identify Harmful Plants</string>
+    <string name="identify_harmful_plants_desc">Detect and classify harmful plants using our AI-powered image recognition</string>
+    <string name="manage_plant_threats">Manage Plant Threats</string>
+    <string name="manage_plant_threats_desc">Get tailored recommendations to effectively control and eliminate harmful plants</string>
+    <string name="protect_crops">Protect Your Crops</string>
+    <string name="protect_crops_desc">Maintain a healthy and sustainable garden, and prevent crop damage</string>
+
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="welcome_to_plantify">Welcome to Plantify</string>
+    <string name="discover_plants">Discover the world of plants</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="username_password_required">Username and password are required.</string>
+    <string name="incorrect_username_password">Incorrect username or password</string>
+    <string name="failed_to_create_user">Failed to create user</string>
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="create_your_account">Create your Account</string>
+    <string name="register_to_explore">Register to explore</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="already_have_account">Already have an account?</string>
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="home">Home</string>
+    <string name="plants">Plants</string>
+    <string name="camera">Camera</string>
+    <string name="ask_expert">Ask Expert</string>
+
+    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="no_camera_app">No camera application found</string>
+    <string name="image_processing_error">An error occurred while processing the image</string>
+    <string name="camera_permission_required">Camera permission is required to proceed</string>
+
+    <string name="profile">Profile</string>
+    <string name="logout">Log Out</string>
+    <string name="logout_confirmation">Confirmation</string>
+    <string name="logout_message">Do you really want to log out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+</resources>

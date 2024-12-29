@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Définir un mot de passe root au lieu de le laisser vide
+      MYSQL_DATABASE: plant
+      # Supprimer MYSQL_USER: root car on ne peut pas l'utiliser pour l'utilisateur root
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'  # Changé en 'no' car nous définissons un mot de passe
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - spring-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - mysqldb
+    environment:
+      PMA_HOST: mysqldb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "8081:80"
+    networks:
+      - spring-network
+
+  plant-backend:
+    build: .
+    container_name: plant-backend
+    depends_on:
+      - mysqldb
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_APPLICATION_NAME: plantBackend
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/plant
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root  # Mis à jour pour correspondre au MYSQL_ROOT_PASSWORD
+      SPRING_JPA_SHOW_SQL: 'true'
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: 'true'
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      SERVER_PORT: 8082
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: ilyassmandour2002@gmail.com
+      SPRING_MAIL_PASSWORD: qlve ttyu jvss hkrq
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: 'true'
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: 'true'
+      SPRING_AI_OPENAI_API-KEY: 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
+    networks:
+      - spring-network
+
+volumes:
+  mysql_data:
+
+networks:
+  spring-network:
+    driver: bridge

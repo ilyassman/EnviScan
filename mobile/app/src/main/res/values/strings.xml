@@ -1,0 +1,179 @@
+<resources>
+    <string name="app_name">planttest2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed
+        dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note_hint">Ajoutez une note...</string>
+    <string name="notes_title">Notes supplémentaires</string>
+
+
+    <!--     Traduction values      -->
+    <string name="current_language">FR</string>
+    <string name="scan_plant">Scanner la plante</string>
+    <string name="choose_gallery">Choisir depuis la galerie</string>
+    <string name="care_tools">Outils de soin</string>
+    <string name="reminder">Rappel</string>
+    <string name="chatbot">Chatbot</string>
+    <string name="humidity">Humidité : </string>
+    <string name="model_load_error">Erreur lors du chargement du modèle</string>
+    <string name="add_reminder">+ Ajouter un rappel</string>
+    <string name="my_plants">Mes plantes</string>
+    <string name="reminders">Rappels</string>
+    <string name="settings">Paramètres</string>
+    <string name="my_garden">Mon Jardin</string>
+    <string name="add_plant">+ Ajouter une plante</string>
+
+    <string name="title_botaniste_ia">Botaniste IA</string>
+    <string name="message_greeting">Bonjour ! Vous pouvez envoyer votre message ou obtenir de l\'aide grâce aux suggestions. 😊</string>
+    <string name="hint_write_message">Écrivez votre message</string>
+
+    <string name="explore_plants">Explorer les plantes</string>
+    <string name="search_hint">Rechercher des plantes</string>
+
+    <string name="define_reminder">Définir un rappel</string>
+    <string name="close">Fermer</string>
+
+    <string name="plant">Plante</string>
+    <string name="task_type">Rappelle-moi de</string>
+    <string name="repeat">Répéter</string>
+    <string name="time">Heure</string>
+    <string name="additional_notes">Notes supplémentaires</string>
+    <string name="notes_hint">• Ajouter une tâche à faire\n• Réfléchir à la planification de la journée\n• Préparer le matériel nécessaire</string>
+    <string name="activate_reminder">Activer le rappel</string>
+
+    <string name="select">Sélectionner</string>
+    <string name="watering">Arroser</string>
+    <string name="misting">Brumiser</string>
+    <string name="rotating">Tourner</string>
+    <string name="fertilizing">Fertiliser</string>
+    <string name="notification_time">C\'est le temps pour %1$s votre plante</string>
+    <string name="time_picker_title">Sélectionner l\'heure</string>
+
+
+    <string name="about">À propos</string>
+    <string name="details">Détails</string>
+    <string name="distribution">Distribution</string>
+    <string name="key_figures">Chiffres clés</string>
+    <string name="characteristics">Caractéristiques</string>
+    <string name="fun_facts">Faits amusants</string>
+
+    <!-- Tags -->
+    <string name="easy">Facile</string>
+    <string name="shortt">Court</string>
+    <string name="flowering">Fleurissant</string>
+    <string name="medicinal">Médicinal</string>
+    <string name="purifying">Purificateur</string>
+
+    <!-- Détails -->
+    <string name="temperature">Température</string>
+    <string name="sunlight">Lumière solaire</string>
+    <string name="water">Eau</string>
+    <string name="repotting">Rempotage</string>
+    <string name="fertilization">Fertilisation</string>
+
+    <!-- Caractéristiques -->
+    <string name="toxicity">Toxicité</string>
+    <string name="weed">Mauvaise herbe</string>
+    <string name="invasive">Caractère envahissant</string>
+    <string name="lifespan">Durée de vie</string>
+    <string name="planting_period">Période de plantation</string>
+
+    <!-- Boutons -->
+    <string name="add_to_my_plants">Ajouter à Mes Plantes</string>
+    <string name="view_3d">Voir 3D</string>
+
+    <string name="skip">Passer</string>
+    <string name="next">Suivant</string>
+    <string name="get_started">Commencer</string>
+
+    <!-- New strings for OnboardingViewPagerAdapter in French -->
+    <string name="identify_harmful_plants">Identifier les plantes nuisibles</string>
+    <string name="identify_harmful_plants_desc">Détecter et classer les plantes nuisibles grâce à notre reconnaissance d\'images alimentée par l\'IA</string>
+    <string name="manage_plant_threats">Gérer les menaces des plantes</string>
+    <string name="manage_plant_threats_desc">Obtenez des recommandations sur mesure pour contrôler et éliminer efficacement les plantes nuisibles</string>
+    <string name="protect_crops">Protéger vos cultures</string>
+    <string name="protect_crops_desc">Maintenir un jardin sain et durable, et prévenir les dommages aux cultures</string>
+
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="welcome_to_plantify">Bienvenue sur Plantify</string>
+    <string name="discover_plants">Découvrez le monde des plantes</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="email">Email</string>
+    <string name="sign_in_with_google">Se connecter avec Google</string>
+    <string name="login">Connexion</string>
+    <string name="dont_have_account">Vous n\'avez pas de compte ?</string>
+    <string name="username_password_required">Nom d\'utilisateur et mot de passe requis.</string>
+    <string name="incorrect_username_password">Nom d\'utilisateur ou mot de passe incorrect</string>
+    <string name="failed_to_create_user">Échec de la création de l\'utilisateur</string>
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="create_your_account">Créer votre compte</string>
+    <string name="register_to_explore">Inscrivez-vous pour explorer</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="register">S\'inscrire</string>
+    <string name="already_have_account">Vous avez déjà un compte ?</string>
+
+    <!-- Ajoutez les nouvelles chaînes ici -->
+    <string name="home">Accueil</string>
+    <string name="plants">Plantes</string>
+    <string name="camera">Appareil photo</string>
+    <string name="ask_expert">Demander Expert</string>
+
+    <string name="choose_from_gallery">Choisir depuis la galerie</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="no_camera_app">Aucune application de caméra trouvée</string>
+    <string name="image_processing_error">Une erreur s\'est produite lors du traitement de l\'image</string>
+    <string name="camera_permission_required">L\'autorisation d\'utiliser la caméra est requise pour continuer</string>
+
+
+    <string name="profile">Profile</string>
+    <string name="logout">Déconnexion</string>
+    <string name="logout_confirmation">Confirmation</string>
+    <string name="logout_message">Voulez-vous vraiment vous déconnecter ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/navigation_plants"
+        android:icon="@drawable/ic_plants"
+        android:title="@string/plants"/>
+    <item
+        android:id="@+id/navigation_camera"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/camera"/>
+    <item
+        android:id="@+id/navigation_expert"
+        android:icon="@drawable/florist_icon"
+        android:title="@string/ask_expert"/>
+    <item
+        android:id="@+id/navigation_garden"
+        android:icon="@drawable/ic_garden"
+        android:title="@string/my_plants"/>
+</menu>

@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: plant
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - mysqldb
+    environment:
+      PMA_HOST: mysqldb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "8081:80"
+    networks:
+      - app-network
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+
+  # Spring Boot Backend
+  plant-backend:
+    build:
+      context: ./backend  # Path to backend directory
+      dockerfile: Dockerfile
+    container_name: plant-backend
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_APPLICATION_NAME: plantBackend
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/plant
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_SHOW_SQL: 'true'
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: 'true'
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      SERVER_PORT: 8082
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: your-email@gmail.com
+      SPRING_MAIL_PASSWORD: your-app-password
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: 'true'
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: 'true'
+      SPRING_AI_OPENAI_API-KEY: your-openai-api-key
+    networks:
+      - app-network
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+
+  # React Frontend
+  plant-frontend:
+    build:
+      context: ./frontend  # Path to frontend directory
+      dockerfile: Dockerfile
+    container_name: plant-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://plant-backend:8082  # Backend service URL
+    networks:
+      - app-network
+    depends_on:
+      - plant-backend
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -433,7 +433,7 @@ Here are step-by-step instructions to set up and run EnviScan locally:
    - Web Admin: [http://localhost:3000](http://localhost:3000)
 
 ## Video Demonstration 🎥
-[Placeholder for video demonstration]
+
 
 ## Contributors 👥
 - Bouleknadel Abderrahmane 

@@ -99,20 +99,24 @@ public class ReminderSetupActivity extends AppCompatActivity {
                 getString(R.string.rotating),
                 getString(R.string.fertilizing)
         };
-        int[] icons = {R.drawable.ic_water, R.drawable.ic_mist,
-                R.drawable.ic_rotate, R.drawable.ic_fertilize};
+        int[] icons = {
+                R.drawable.ic_water,
+                R.drawable.ic_mist,
+                R.drawable.ic_rotate,
+                R.drawable.ic_fertilize
+        };
 
         BottomSheetDialog dialog = new BottomSheetDialog(this);
         View view = getLayoutInflater().inflate(R.layout.task_type_selector, null);
         RecyclerView recyclerView = view.findViewById(R.id.taskRecyclerView);
 
         TaskAdapter adapter = new TaskAdapter(tasks, icons, task -> {
-            btnTaskType.setText(getString(R.string.select));
+            btnTaskType.setText(task); // Cela mettra à jour le texte du bouton avec la tâche sélectionnée
             dialog.dismiss();
         });
 
-        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
         dialog.setContentView(view);
         dialog.show();
     }
@@ -225,4 +229,3 @@ public class ReminderSetupActivity extends AppCompatActivity {
         prefs.saveReminder(reminder);
     }
 }
-

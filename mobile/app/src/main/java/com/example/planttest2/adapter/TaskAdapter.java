@@ -1,6 +1,5 @@
 package com.example.planttest2.adapter;
 
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,11 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.planttest2.R;
-// TaskAdapter.java
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder> {
     private String[] tasks;
     private int[] icons;
     private OnTaskSelectedListener listener;
+    private int selectedPosition = -1; // Ajoutez cette ligne
 
     public interface OnTaskSelectedListener {
         void onTaskSelected(String task);
@@ -51,13 +51,20 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             text = itemView.findViewById(R.id.taskText);
 
             itemView.setOnClickListener(v -> {
-                listener.onTaskSelected(tasks[getAdapterPosition()]);
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    selectedPosition = position;
+                    notifyDataSetChanged();
+                    listener.onTaskSelected(tasks[position]);
+                }
             });
         }
 
         void bind(String task, int iconRes) {
             text.setText(task);
             icon.setImageResource(iconRes);
+            // Optionnel : Vous pouvez ajouter une mise en évidence visuelle de l'élément sélectionné
+            itemView.setSelected(getAdapterPosition() == selectedPosition);
         }
     }
 }

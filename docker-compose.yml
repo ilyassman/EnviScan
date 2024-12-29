@@ -60,10 +60,10 @@ services:
       SPRING_MAIL_HOST: smtp.gmail.com
       SPRING_MAIL_PORT: 587
       SPRING_MAIL_USERNAME: ilyassmandour2002@gmail.com
-      SPRING_MAIL_PASSWORD: qlve ttyu jvss hkrq
+      SPRING_MAIL_PASSWORD: #Your Email Pawword
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: 'true'
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: 'true'
-      SPRING_AI_OPENAI_API-KEY: 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
+      SPRING_AI_OPENAI_API-KEY: #Your OPENAI API KEY
     networks:
       - app-network
     depends_on:

@@ -4,7 +4,7 @@ services:
   # MySQL Database
   mysqldb:
     image: mysql:8.0
-    container_name: mysqldb
+    container_name: mysqldb_plantapp
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: plant
@@ -24,7 +24,7 @@ services:
   # phpMyAdmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: phpmyadmin_plantapp
     links:
       - mysqldb
     environment:
@@ -44,14 +44,14 @@ services:
     build:
       context: ./backend  # Path to backend directory
       dockerfile: Dockerfile
-    container_name: plant-backend
+    container_name: plant-backend_plantapp
     ports:
       - "8082:8082"
     environment:
       SPRING_APPLICATION_NAME: plantBackend
       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/plant
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_PASSWORD: root  # Mis à jour pour correspondre au MYSQL_ROOT_PASSWORD
       SPRING_JPA_SHOW_SQL: 'true'
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: 'true'
@@ -59,11 +59,11 @@ services:
       SERVER_PORT: 8082
       SPRING_MAIL_HOST: smtp.gmail.com
       SPRING_MAIL_PORT: 587
-      SPRING_MAIL_USERNAME: your-email@gmail.com
-      SPRING_MAIL_PASSWORD: your-app-password
+      SPRING_MAIL_USERNAME: ilyassmandour2002@gmail.com
+      SPRING_MAIL_PASSWORD: qlve ttyu jvss hkrq
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: 'true'
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: 'true'
-      SPRING_AI_OPENAI_API-KEY: your-openai-api-key
+      SPRING_AI_OPENAI_API-KEY: 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
     networks:
       - app-network
     depends_on:
@@ -73,11 +73,11 @@ services:
   # React Frontend
   plant-frontend:
     build:
-      context: ./frontend  # Path to frontend directory
+      context: ./web  # Path to frontend directory
       dockerfile: Dockerfile
     container_name: plant-frontend
     ports:
-      - "3000:3000"
+      - "3000:80"
     environment:
       - REACT_APP_API_URL=http://plant-backend:8082  # Backend service URL
     networks:

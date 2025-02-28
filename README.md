@@ -1,10 +1,10 @@
 ![EnviScan Logo](./assets/logoplantsite.png)
 
-# EnviScan: Plant Identification and Management Application 🌱
+# EnviScan+: Plant Identification and Management Application 🌱
 
 
 
-This platform enables real-time plant identification and management using advanced machine learning techniques. EnviScan helps users identify plants through photo capture, provides detailed care information, and manages maintenance schedules through an intuitive mobile interface.
+This platform enables real-time plant identification and management using advanced machine learning techniques. EnviScan+ helps users identify plants through photo capture, provides detailed care information, and manages maintenance schedules through an intuitive mobile interface.
 
 ## Table of Contents
 
@@ -346,7 +346,7 @@ The modular approach allows for easy expansion and modification of features whil
 ```
 
 ## Getting Started 🚀
-Here are step-by-step instructions to set up and run EnviScan locally:
+Here are step-by-step instructions to set up and run EnviScan+ locally:
 
 ### Prerequisites:
 

@@ -1,4 +1,4 @@
-![EnviScan Logo](./assets/logoplantsite.png)
+![EnviScan Logo](./assets/logoEnviscan+.png)
 
 # EnviScan+: Plant Identification and Management Application 🌱
 
